@@ -1,0 +1,74 @@
+body{
+    background-color: $whiteM;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.boutWrap{
+    display: grid;
+    
+    grid-template-columns: 4fr 4fr ;
+    grid-template-rows: repeat(2, 200px);
+    gap: 20px;
+
+}
+
+
+
+.homeAbout{
+    height: 50vh;
+    overflow:scroll;
+    background-color: $purpleM;
+    color: $yellowM;
+    box-shadow: $boxShadow;
+    padding: 50px;
+    font-size: 1em;
+    
+    
+}
+.boutContainer{
+padding: 0px 200px;
+}
+
+.homeAbout2{height: 50vh;
+    background-color: $yellowM;
+    color: $purpleM;
+    box-shadow: -3px -3px 5px black;
+
+}
+.buissContainer{
+    display:grid;
+    grid-template-columns:  2fr 2fr 2fr 2fr ;
+    width: 30;
+    gap: 40px;
+    @include mobile{grid-template-columns:  4fr 4fr;
+
+    }
+    @include tablet{grid-template-columns:  4fr 4fr;
+
+    }
+    
+}
+.card{
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: $boxShadow;
+    
+    h5{
+        font-family: 'Pattaya';
+    }
+    img{
+        max-height: 40%;
+    }
+    @include mobile{
+        p{display: none;}
+    }
+}
+.buissContCont{
+    margin: 0px 10vw;
+    background-color: $greenM;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: $boxShadow;
+}
+
