@@ -1,102 +1,136 @@
-
 #header1 {
-   
+
     width: 100%;
     height: 100%;
     text-align: center;
 }
-   nav{display: flex;
-    background: $greenM;  
+
+nav {
+    display: flex;
+    background: $greenM;
     flex-direction: column;
 
+
+
 }
-.navbar-nav {padding: 0;
-    display: flex;
-    justify-items: center;
-    a{color: $purpleM;}
-    
-    color: $yellowM;
-    text-align: center;
-    background-color: $greenM;
-   
-   
+
+.nav-container {
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
- 
+
+.logo-container {
+    position: relative;
+    min-width: 10vw;
+    z-index: 5;
+    height: 50vh;
     
-    .coverPhoto{
+
+
+
+}
+
+.mainLogo {
+    transition: 0.3s;
+
+    @include tablet {
+        display: none;
+    }
+    }
+
+    .mainLogoSec {display: block;
+        position: fixed;
+        float: left;
+        width: 6vw;
+        height: 6vh;
+        z-index: 2;
+
+        @include tablet {
+            display: none;
+        }}
+    
+
+    .navbar-nav a {
+
+        color: $purpleM;
+
+        &:hover {
+            color: $yellowM;
+        }
+    }
+
+    .purpSep {
+        background-color: $purpleM;
+        width: 50vw;
+        height: 6vh;
+        border-radius: 0px 60px 60px 0px;
+        margin-right: 6px;
+    }
+
+    .yellSep {
+        width: 50vw;
+        height: 6vh;
+        background-color: $yellowM;
+        border-radius: 60px 0px 0px 60px;
+        margin-left: 6px;
         
+    }
+
+    .sepContainer {
+        display: flex;
+       align-items:center ;
+        background-color: $greenM;
+        height: 10vh;
+    }
+
+    .coverPhoto {
+
         position: relative;
         width: 100%;
         height: 60vh;
         z-index: 1;
         left: auto;
-        @include mobile{
+
+        @include mobile {
             display: none;
 
         }
+
+        @include tablet {
+            display: none;
+        }
     }
-    
-    .divCover{
-        
+
+    .divCover {
+
         position: absolute;
         width: 100%;
         height: 60vh;
         z-index: 2;
         left: auto;
-background-color: rgba(251, 255, 0, 0.219);
-        @include mobile{
+        background-color: rgba(251, 255, 0, 0.219);
+
+        @include mobile {
             display: none;
 
         }
+
+        @include tablet {
+            display: none;
+        }
     }
-    .navbar>.container{
-        
-        
-    }
-    .mainLogo{ position: relative;
-        width: 36vw;
-        z-index: 3;
-        height: 50vh;
-         transition: 0.3s;
-       
-        
-        
-        
-    }
+
+
+
     /* .navbar-toggler{
         display: flex;
         align-items: center;  
       } */
-    .navbar-nav > li {
+    .navbar-nav>li {
         font-size: 2.5rem;
         padding: 0px 20px;
-        
-        
+        font-family: 'Pattaya';
+
+
     }
-    /* .topTitle {font-size: 7vw;
-        font-weight: 800;
-        position: absolute;
-    font-family: 'Henny Penny';
-    z-index: 4;
-    left: 17vw;
-    top: 50vh;
-    color: $purpleM;
-    
-    text-shadow: 3px 3px 3px black;
-    letter-spacing: 2.5px; 
-    
-    } */
-    ul li{ font-family: 'Pattaya';
-    font-size: 2rem;}
-    
-
-    .sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 60px;
-}

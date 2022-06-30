@@ -14,7 +14,7 @@ $boxShadow: 3px 3px 5px black;
     }
 } 
 @mixin tablet {
-    @media (max-width:800px) {
+    @media (max-width:920px) {
         @content;
     }
 } 
