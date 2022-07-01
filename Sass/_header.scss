@@ -36,7 +36,7 @@ nav {
 .navbar-collapse {
     @include mobile{
     position: fixed;
-    top: 50px;
+    top: 74px;
     /* adjust to height of navbar */
     left: 0;
     padding-left: 15px;
@@ -45,7 +45,9 @@ nav {
     width: 75%;
     height: 100%;}
     background: $greenM;
-    margin-top: 24px;
+    /* margin-top: 24px; */
+    box-shadow: 2px 0px 0px rgba(0, 0, 0, 0.151);
+    
 }
 .navbar-collapse.collapsing {
    @include mobile {
@@ -57,7 +59,7 @@ nav {
    @include mobile {
        left: 0;
     transition: left 300ms ease-in-out;}
-}}
+}
 
 /* .navbar-toggler.collapsed~.navbar-collapse {
     @include mobile {
