@@ -16,35 +16,41 @@
 </head>
 
 <body>
-    <div id="header1">
-        <header>
-           <img src="/Content/MardiGrasLogo.png" class="mainLogoSec" alt="MardiGrasLogo">
-           </header>
-           <div class="nav-container">
-               <nav class="navbar navbar-expand-lg">
-                   <div class="container1">
-                       <button class=" navbar-toggler" type="button" data-bs-toggle="collapse"
-                           data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                           aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"
-                               style="font-size: 2rem;">☰</span></button>
-                       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                               <li class="nav-item"><a class="nav-link " aria-current="page" href="/index.html">Home</a></li>
-                               <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
-                               <li class="nav-item"><a class="nav-link" href="#" aria-current="page">Media</a>
-                               </li>
-                               <li class="nav-item"><a class="nav-link" href="/faq.html">Faq</a></li>
-                               <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
-                           </ul>
-                       </div>
-                   </div>
-               </nav>
-           </div>
-    </div>
-    <main>
+   <div id="header1">
+       <header>
 
-    <div class="row justify-content-center">
-        <div class="col-md-8" data-code="example-2">
+           <img src="/Content/MardiGrasLogo.png" class="mainLogoSec" alt="MardiGrasLogo">
+       </header>
+       <div class="sepContainer">
+           <div class="purpSep"></div>
+           <div class="yellSep"></div>
+       </div>
+       <div class="nav-container">
+           <nav class="navbar fixed-top navbar-expand-lg ">
+               <div class="container1">
+                   <button class=" navbar-toggler" type="button" data-bs-toggle="collapse"
+                       data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                       aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"
+                           style="font-size: 2rem;">☰</span></button>
+                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                           <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+                           <li class="nav-item"><a class="nav-link" href="/about.html" aria-current="page">About</a>
+                           </li>
+                           <li class="nav-item"><a class="nav-link" href="#">Media</a></li>
+                           <li class="nav-item"><a class="nav-link" href="/faq.html">Faq</a></li>
+                           <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+                       </ul>
+                   </div>
+               </div>
+           </nav>
+       </div>
+   </div>
+   
+
+    <div class="row justify-content-center" id="media-gallery">
+        <div class="col-md-8" data-code="example-2" id="media-gallery-container">
+            <h2>Photos</h2>
             <div class="row">
                 <a href="Content/MardiGraimg1.jpg" data-toggle="lightbox"
                     data-gallery="example-gallery" class="col-sm-4">
@@ -59,25 +65,36 @@
                     <img src="Content/MardiGraimg3.jpg" class="img-fluid">
                 </a>
             </div>
+            <h2>Videos</h2>
+            <br>
             <div class="row">
-                <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox"
-                    data-gallery="example-gallery" class="col-sm-4">
-                    <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid">
-                </a>
-                <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox"
-                    data-gallery="example-gallery" class="col-sm-4">
-                    <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid">
-                </a>
-                <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox"
-                    data-gallery="example-gallery" class="col-sm-4">
-                    <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid">
+                <a href="https://www.youtube.com/watch?v=OwsyTmNB-aQ" data-toggle="lightbox"
+                    data-gallery="youtubevideos" class="col-sm-4">
+                    <img src="Content/YTFrame1.png"
+                        class="img-fluid">
+                </a><br>
+                <a href="https://www.youtube.com/watch?v=EkIZwXbSh-Y" data-toggle="lightbox"
+                    data-gallery="youtubevideos"
+                    class="col-sm-4">
+                    <img src="Content/YTFrame2.png"
+                        class="img-fluid">
+                </a><br>
+                <a href="https://www.youtube.com/watch?v=EGnLaXMCFVY" data-toggle="lightbox"
+                    data-gallery="youtubevideos"
+                    class="col-sm-4">
+                    <img src="Content/YTFrame3.png"
+                        class="img-fluid">
                 </a>
             </div>
         </div>
     </div>
     
      </main>
-    <footer id="footer1">
+     <div class="sepContainer fixed-bottom">
+         <div class="purpSep"></div>
+         <div class="yellSep"></div>
+     </div>
+    <footer id="footer1" class="fixed-bottom">
         <p>&#169; 
 All rights reserved to me</p>
     </footer>

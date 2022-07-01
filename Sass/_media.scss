@@ -1,0 +1,21 @@
+
+#media-gallery-container{
+    background-color: $greenM;
+    display: flex;
+    flex-direction: column;
+padding: 20px;
+    align-items: center;
+    margin: 170px;
+    border-radius: 30px;
+
+
+    .row{
+        margin-bottom: 30px;
+        
+    }
+    h2{
+        color: $purpleM;
+        font-size: 3rem;
+    font-family: 'Pattaya';}
+
+}
