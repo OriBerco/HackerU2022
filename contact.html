@@ -22,7 +22,7 @@
             <img src="/Content/MardiGrasLogo.png" class="mainLogoSec" alt="MardiGrasLogo">
         </header>
         <div class="nav-container">
-            <nav class="navbar navbar-expand-lg">
+            <nav class="navbar fixed-top navbar-expand-lg">
                 <div class="container1">
                     <button class=" navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -30,30 +30,115 @@
                             style="font-size: 2rem;">☰</span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link "  href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
                             <li class="nav-item"><a class="nav-link" href="/media.html">Media</a></li>
                             <li class="nav-item"><a class="nav-link" href="/faq.html">Faq</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#"
-                                    aria-current="page">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" aria-current="page">Contact</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </div>
     </div>
+    <div class="sepContainer">
+        <div class="purpSep"></div>
+        <div class="yellSep"></div>
+    </div>
+    <div class="thisPage"><h2>Contact</h2></div>
+    
     <main>
-        <div>
-
+        <div class="contactUs">
+            
+            
+            
+            <div><h2>Get in touch!</h2><br>
+                <div class="formContainer">
+            <form action="">
+                <input type="text" id="fName" placeholder="First Name">
+                <span class="firstNameError"></span>
+                <br>
+                <input type="text" id="lName" placeholder="Last Name">
+                <span class="lastNameError"></span>
+                <br>
+                <input type="tel" id="phone" placeholder="Phone Number">
+                <span class="phoneError"></span>
+                <br>
+                <input type="email" id="email" placeholder="Email">
+                <span class="emailError"></span>
+                <br>
+<textarea name="texti" id="" cols="28" rows="4" placeholder="Tell us more.."></textarea>
+                
+                <input type="button" value="Submit">
+            </form></div></div>
+            <div class="dits"><h2>Contact Us</h2> <br><br><br><h5>Phone Number: +972-50-323-2255</h5>
+            <h5>Address: Blag Blig Blag Luksinton Rd</h5><br>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d221064.61359299612!2d-89.88256344999999!3d30.032996449999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8620a454b2118265%3A0xdb065be85e22d3b4!2z16DXmdeVINeQ15XXqNec15nXoNehLCDXnNeV15DXmdeW15nXkNeg15QsINeQ16jXpteV16og15TXkdeo15nXqg!5e0!3m2!1siw!2sil!4v1656685682582!5m2!1siw!2sil"
+                width="450" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe></div>
         </div>
     </main>
-    <footer id="footer1">
+    <footer id="footer1" class="fixed-bottom">
         <p>&#169;
             All rights reserved to me</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script>
+        const fName = document.getElementById('fName');
+        const lName = document.getElementById('lName');
+        const phone = document.getElementById('phone');
+        const email = document.getElementById('email');
+        const firstNameError = document.querySelector('.firstNameError');
+        const lastNameError = document.querySelector('.lastNameError');
+        const phoneError = document.querySelector('.phoneError');
+        const emailError = document.querySelector('.emailError');
+        const btn = document.querySelector('input[type=button]');
+
+        btn.addEventListener('click', function () {
+            if (fName.value == '') {
+               
+                firstNameError.innerHTML = "Enter First Name";
+                firstNameError.style.color = "red";
+                fName.style.border = "1px solid red";
+            } else {
+                firstNameError.innerHTML = " ";
+                 fName.style.border = "1px solid ";
+            }
+            if (lName.value == '') {
+               
+                lastNameError.innerHTML = "Enter Last Name";
+                lastNameError.style.color = "red";
+                lName.style.border = "1px solid red";
+            } else {
+                lastNameError.innerHTML = " ";
+                lName.style.border = "1px solid ";
+            }
+            if (phone.value == '') {
+               
+                phoneError.innerHTML = "Enter Phone Number";
+                phoneError.style.color = "red";
+                phone.style.border = "1px solid red";
+            } else {
+                phoneError.innerHTML = " ";
+                phone.style.border = "1px solid ";
+            }
+
+
+            if (email.value == '' || email.value.indexOf('@') == -1 || email.value.indexOf('.') == -1) {
+                // alert('Please Enter Email');
+                emailError.innerHTML = "Enter Email";
+                emailError.style.color = "red";
+                email.style.border = "1px solid red";
+            } else {
+                emailError.innerHTML = " ";
+                email.style.border = "1px solid ";
+            }
+
+        });
     </script>
 </body>
 

@@ -25,46 +25,84 @@ nav {
     min-width: 10vw;
     z-index: 5;
     height: 50vh;
-    
+
 
 
 
 }
 
-    
+.thisPage {
+    display: none;
+    height: 5vh;
+    background-color: $greenM;
+    text-align: center;
+    color: $yellowM;
+    font-family: 'pattaya';
+    text-decoration: underline;
+    h2{
+        font-size: 2.8rem;
+    }
+
+    @include mobile {
+        display: block;
+    }
+
+    @include tablet {
+        display: block;
+    }
+}
 
 .navbar-collapse {
-    @include mobile{
-    position: fixed;
-    top: 74px;
-    /* adjust to height of navbar */
-    left: 0;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    width: 75%;
-    height: 100%;}
+    @include mobile {
+        position: fixed;
+        top: 74px;
+        left: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        width: 75%;
+        height: 100%;
+    }
+    @include tablet {
+        position: fixed;
+        top: 74px;
+        left: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        width: 75%;
+        height: 100%;
+    }
+
     background: $greenM;
-    /* margin-top: 24px; */
-    box-shadow: 2px 0px 0px rgba(0, 0, 0, 0.151);
-    
+
+
 }
+
 .navbar-collapse.collapsing {
-   @include mobile {
-       left: -75%;
-    transition: height 0s ease;}
+    @include mobile {
+        left: -75%;
+        transition: height 0s ease;
+    }
+    @include tablet {
+        left: -75%;
+        transition: height 0s ease;
+    }
 }
 
 .navbar-collapse.show {
-   @include mobile {
-       left: 0;
-    transition: left 300ms ease-in-out;}
+    @include mobile {
+        left: 0;
+        transition: left 300ms ease-in-out;
+    }
+    @include tablet {
+        left: 0;
+        transition: left 300ms ease-in-out;
+    }
 }
 
-/* .navbar-toggler.collapsed~.navbar-collapse {
-    @include mobile {
-        transition: left 500ms ease-in-out;}
-} */
+
+
 
 .mainLogo {
     transition: 0.3s;
@@ -72,100 +110,103 @@ nav {
     @include tablet {
         display: none;
     }
+}
+
+.mainLogoSec {
+    display: block;
+    position: fixed;
+    float: left;
+    width: 5vw;
+    height: 7vh;
+    z-index: 2;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+
+.navbar-nav a {
+
+    color: $purpleM;
+
+    &:hover {
+        color: $yellowM;
+    }
+}
+
+.purpSep {
+    background-color: $purpleM;
+    width: 50vw;
+    height: 6vh;
+    border-radius: 0px 60px 60px 0px;
+    margin-right: 6px;
+}
+
+.yellSep {
+    width: 50vw;
+    height: 6vh;
+    background-color: $yellowM;
+    border-radius: 60px 0px 0px 60px;
+    margin-left: 6px;
+
+}
+
+.sepContainer {
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    background-color: $greenM;
+    padding-top: 25px;
+}
+
+.coverPhoto {
+
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    z-index: 1;
+    left: auto;
+
+    @include mobile {
+        display: none;
+
     }
 
-    .mainLogoSec {display: block;
-        position: fixed;
-        float: left;
-        width: 5vw;
-        height: 7vh;
-        z-index: 2;
+    @include tablet {
+        display: none;
+    }
+}
 
-        @include tablet {
-            display: none;
-        }}
-    
+.divCover {
 
-    .navbar-nav a {
+    position: absolute;
+    width: 100%;
+    height: 60vh;
+    z-index: 2;
+    left: auto;
+    background-color: rgba(251, 255, 0, 0.219);
 
-        color: $purpleM;
+    @include mobile {
+        display: none;
 
-        &:hover {
-            color: $yellowM;
-        }
     }
 
-    .purpSep {
-        background-color: $purpleM;
-        width: 50vw;
-        height: 6vh;
-        border-radius: 0px 60px 60px 0px;
-        margin-right: 6px;
+    @include tablet {
+        display: none;
     }
-
-    .yellSep {
-        width: 50vw;
-        height: 6vh;
-        background-color: $yellowM;
-        border-radius: 60px 0px 0px 60px;
-        margin-left: 6px;
-        
-    }
-
-    .sepContainer {
-        display: flex;
-       align-items:center ;
-        background-color: $greenM;
-        padding-top: 25px;
-    }
-
-    .coverPhoto {
-
-        position: relative;
-        width: 100%;
-        height: 60vh;
-        z-index: 1;
-        left: auto;
-
-        @include mobile {
-            display: none;
-
-        }
-
-        @include tablet {
-            display: none;
-        }
-    }
-
-    .divCover {
-
-        position: absolute;
-        width: 100%;
-        height: 60vh;
-        z-index: 2;
-        left: auto;
-        background-color: rgba(251, 255, 0, 0.219);
-
-        @include mobile {
-            display: none;
-
-        }
-
-        @include tablet {
-            display: none;
-        }
-    }
+}
 
 
 
-    /* .navbar-toggler{
+/* .navbar-toggler{
         display: flex;
         align-items: center;  
       } */
-    .navbar-nav>li {
-        font-size: 2.5rem;
-        padding: 0px 20px;
-        font-family: 'Pattaya';
+.navbar-nav>li {
+    font-size: 2.5rem;
+    padding: 0px 20px;
+    font-family: 'Pattaya';
 
 
-    }
+}

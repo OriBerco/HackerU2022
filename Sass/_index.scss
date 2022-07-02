@@ -237,7 +237,7 @@ main {
     font-family: Arial;
     text-align: center;
     width: 45vw;
-    margin: 10% auto;
+    margin: 5% auto;
     background-color: $greenM;
     padding: 20px;
     position: relative;
@@ -329,6 +329,12 @@ main {
 
 .close8 {
     @extend %close;
+}
+.closeTriv {
+    font-size: 2rem;
+    color: $purpleM;
+    text-align: right;
+    cursor: pointer;
 }
 
 %popupCards {

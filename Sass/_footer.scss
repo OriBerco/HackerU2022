@@ -1,6 +1,119 @@
 #footer1 {
-   
+
     display: block;
+    z-index: 2;
     padding: 10px;
     text-align: center;
-    background-color: $greenM;}
+    background-color: $greenM;
+}
+
+.trivia-btn {
+    @include mobile {
+        display: none;
+    }
+
+    @include tablet {
+        display: none;
+    }
+
+}
+
+.secret-trivia-wrapper {
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    .secret-trivia {
+        padding: 100px;
+        background-color: $greenM;
+        width: 50vw;
+        height: 66vh;
+
+        @include mobile {
+            width: 80vw;
+        }
+
+        trivia-container {
+            margin-top: 50px;
+        }
+    }
+
+
+
+    .question {
+        display: block;
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+
+    .answers {
+        margin-bottom: 20px;
+        text-align: left;
+        display: inline-block;
+        font-size: 2em;
+    }
+
+    .answers label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    button {
+        margin: 20px;
+        font-family: 'roboto', sans-serif;
+        font-size: 30px;
+        background-color: $purpleM;
+        color: #fff;
+        border: 0px;
+        border-radius: 3px;
+        padding: 20px;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+
+    .btnDiv {
+        margin-top: 150px;
+        padding: 50px;
+    }
+
+    button:hover {
+        background-color: $yellowM;
+    }
+
+
+
+
+
+    .slideQ {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+
+    .active-slideQ {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    .quiz-container {
+        position: relative;
+        height: 200px;
+        margin-top: 40px;
+    }
+}
+.resultsLive{
+    text-align: right;
+    color: $yellowM;
+    
+}

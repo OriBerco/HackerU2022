@@ -1,21 +1,36 @@
+body {
+    background-color: $whiteM;
+    font-family: 'Roboto', sans-serif;
 
-#media-gallery-container{
+}
+
+#media-gallery-container {
     background-color: $greenM;
     display: flex;
     flex-direction: column;
-padding: 20px;
+    padding: 20px;
     align-items: center;
     margin: 170px;
     border-radius: 30px;
 
 
-    .row{
-        margin-bottom: 30px;
-        
+    .row {
+        margin-bottom: 20px;
+       
+
+        img{
+            margin-bottom: 20px;
+        }
+
     }
-    h2{
+
+    h2 {
         color: $purpleM;
         font-size: 3rem;
-    font-family: 'Pattaya';}
-
+        font-family: 'Pattaya';
+    }
+.media-row {
+    text-align: center;
+    
+}
 }
