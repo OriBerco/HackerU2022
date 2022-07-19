@@ -25,12 +25,12 @@ main {
 
     @include mobile {
         width: 400px;
-        height: 500px;
+        height: 100px;
     }
 
     @include tablet {
         width: 500px;
-        height: 750px;
+        height: 450px;
     }
 
     h3 {
