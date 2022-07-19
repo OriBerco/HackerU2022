@@ -12,6 +12,13 @@
      font-family: 'roboto';
      margin: 5px;
 
+     @include mobile {
+         input {
+             width: 60vw;
+         }
+
+     }
+
 
 
 
@@ -32,10 +39,16 @@
      border-radius: 10px;
      margin: 100px;
      box-shadow: 1px 1px 2px;
-h2 {
-    font-family: 'pattaya';
-    color: $purpleM;
-}
+
+     @include mobile {
+         width: 90vw;
+     }
+
+     h2 {
+         font-family: 'pattaya';
+         color: $purpleM;
+     }
+
      @include mobile {
          flex-direction: column;
      }
@@ -50,16 +63,20 @@ h2 {
      background-color: $whiteM;
      padding: 10px;
      border-radius: 10px;
-    
+
      box-shadow: 1px 1px 2px;
 
-     
+
  }
 
  .dits {
      margin-left: 50px;
 
      @include mobile {
+         iframe {
+             display: none;
+         }
+
          margin: 2px;
      }
 
@@ -67,5 +84,6 @@ h2 {
 
          margin: 2px;
      }
+
 
  }
