@@ -4,20 +4,48 @@
 
 /* Slideshow container */
 .slide-container {
-  background-color: $greenM;
+  display: flex;
+  margin-top: 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  
   width: 100%;
 }
 
 .slideshow-container {
-
-
-
-
+  display: flex;
+    justify-content: center;
+  align-items: center;
+  flex-direction: column;
+    box-shadow: 2px 2px 10px black;
+width: 80%;
+background-color: $greenM;
+border-radius: 5px;
   padding: 20px;
+  
+
 
 
 }
+.arrowHandler{display: flex;
+align-items: center;
+a{
+  text-decoration: none;
+}}
 
+.mySlides .fade{
+width: 80%;
+height: 80%;  
+
+
+}
+img{
+width: 70vw;
+height: 50vh;
+border-radius: 5px;
+  }
 /* Hide the images by default */
 
 
@@ -25,7 +53,7 @@
 .prev,
 .next {
   cursor: pointer;
-  position: absolute;
+  
   top: 50%;
   width: auto;
   margin-top: -22px;
@@ -35,6 +63,7 @@
   font-size: 18px;
   transition: 0.6s ease;
 
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -54,7 +83,7 @@
 /* Caption text */
 .text {
   color: $blackM;
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding: 6px 8px;
   position: relative;
   margin-top: 6px;
@@ -64,12 +93,11 @@
 }
 
 /* Number text (1/3 etc) */
-.numbertext {
+.numbertextS {
   color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+  font-size: 15px;
+  padding: 8px 8px;
+  text-align: center;
   z-index: 2;
 }
 

@@ -10,18 +10,18 @@ var navbar = document.getElementById("navbar");
 
 // Get the offset position of the navbar
 
-  if (document.body.scrollTop > 760 || document.documentElement.scrollTop > 760) {
+  if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
     document.querySelector(".mainLogo").style.width = "6vw";
-    document.querySelector(".mainLogo").style.height = "7vh";
+    document.querySelector(".mainLogo").style.height = "6.5%";
     document.querySelector(".mainLogo").style.maxWidth = "7vw";
     document.querySelector(".mainLogo").style.position = "fixed";
     document.querySelector(".mainLogo").style.left = "0vw";
     
     
   } else {
-    document.querySelector(".mainLogo").style.width = "30vw";
+    document.querySelector(".mainLogo").style.width = "40vw";
     document.querySelector(".mainLogo").style.height = "50vh";
-    document.querySelector(".mainLogo").style.maxWidth = "30vw";
+    document.querySelector(".mainLogo").style.maxWidth = "40vw";
     document.querySelector(".mainLogo").style.position = "relative";
     document.querySelector(".mainLogo").style.left = "0vw";
   }
@@ -32,7 +32,10 @@ showSlides(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  showSlides(n++);
+}
+function minusSlides(n) {
+  showSlides(slideIndex -= n);
 }
 
 // Thumbnail image controls
@@ -61,8 +64,8 @@ function showSlides(n) {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 3000)
-}
+  
+}setInterval(showSlides, 3000)
 
 /* let slideIndex = 0;
 showSlides();
@@ -257,33 +260,33 @@ close8.addEventListener('click',()=>{
   const submitButton = document.getElementById('submitA');
   const myQuestions = [
     {
-      question: "Who invented JavaScript?",
+      question: "Who started Mardi Grau?",
       answers: {
         a: "Douglas Crockford",
         b: "Sheryl Sandberg",
-        c: "Brendan Eich"
+        c: "Brendan Eich",
       },
-      correctAnswer: "c"
+      correctAnswer: "c",
     },
     {
-      question: "Which one of these is a JavaScript package manager?",
+      question: "Which these city's celebrates Mardi Grau?",
       answers: {
-        a: "Node.js",
-        b: "TypeScript",
-        c: "npm"
+        a: "New Orleans",
+        b: "New York",
+        c: "Texas",
       },
-      correctAnswer: "c"
+      correctAnswer: "c",
     },
     {
-      question: "Which tool can you use to ensure code quality?",
+      question: "What is Mardi Garu in french?",
       answers: {
-        a: "Angular",
-        b: "jQuery",
-        c: "RequireJS",
-        d: "ESLint"
+        a: "Fat Tuesday",
+        b: "Breakfast",
+        c: "Love Day",
+        d: "Ligma Balls",
       },
-      correctAnswer: "d"
-    }
+      correctAnswer: "d",
+    },
   ];
 
  
